@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_HOST'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: guardianes_informaticos_development
+
+test:
+  <<: *default
+  database: guardianes_informaticos_test
+
+production:
+  <<: *default
+  database: guardianes_informaticos_production
+  username: guardianes_informaticos
+  password: <%= ENV["GUARDIANES_INFORMATICOS_DATABASE_PASSWORD"] %>
