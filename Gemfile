@@ -23,6 +23,8 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+gem "hotwire-rails", "~> 0.1.3"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -44,10 +46,23 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+# display Swagger UI
+gem 'rswag-ui', '2.13.0'
+# make API requests from Swagger UI
+gem 'rswag-api', '2.13.0'
+
+# New Relic
+gem 'newrelic_rpm', '~> 9.6'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
   gem 'pry', '~> 0.14.2'
+  gem 'rails_best_practices', '~> 1.23', '>= 1.23.2'
+  gem 'rspec-rails', '~> 6.1'
+  gem 'rswag-specs', '2.13.0'
+  gem 'simplecov', '~> 0.22.0'
+  gem 'webmock', '~> 3.19', '>= 3.19.1'
 end
 
 group :development do

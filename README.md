@@ -18,11 +18,9 @@ https://docs.docker.com/engine/install/ubuntu/
    ```bash
    git clone https://github.com/johncuervo/guardianes-informaticos-spa-JB.git
    cd guardianes-informaticos-spa-JB
-
 2. Build and run the application using Docker Compose:
     ```bash
-   docker-compose up --build
-
+   docker compose up --build
 3. Open in the browser:
 
     http://localhost:3000
